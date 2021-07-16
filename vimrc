@@ -7,6 +7,8 @@ syntax on
 set guifont=Monaco:h12
 
 colorscheme gruvbox
+"colorscheme srcery-drk
+"https://github.com/srcery-colors/srcery-colors.github.io
 
 set number
 
