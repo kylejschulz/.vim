@@ -3,6 +3,7 @@ execute pathogen#infect()
 
 filetype plugin indent on
 
+syntax enable
 syntax on
 set guifont=Monaco:h12
 
@@ -26,14 +27,15 @@ set expandtab
 set smartindent
 set autoindent
 
-
 "this removes whitespaces on save
 autocmd BufWritePre * :%s/\s\+$//e
 
 set hlsearch
 
-"cancels search with Escape
-nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
+"cancels search with Escape.
+"This caused some annoying problems when it was <silet><Esc> by loading a
+"buffer on bottom of page on refocus
+nnoremap <Esc><Esc> :nohlsearch<Bar>:echo<CR>
 
 "toggles to previous file
 nnoremap <Leader><Leader> :e#<CR>
