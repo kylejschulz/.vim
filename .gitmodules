@@ -40,3 +40,6 @@
 [submodule "bundle/rust.vim"]
 	path = bundle/rust.vim
 	url = git@github.com:rust-lang/rust.vim.git
+[submodule "bundle/any-jump.vim"]
+	path = bundle/any-jump.vim
+	url = git@github.com:pechorin/any-jump.vim.git
