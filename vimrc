@@ -14,7 +14,12 @@ colorscheme gruvbox
 "colorscheme srcery-drk
 "https://github.com/srcery-colors/srcery-colors.github.io
 
+set background=dark     " Set Vim to use a dark background
 set number
+set relativenumber    " Show relative line numbers on other lines
+
+
+
 
 let mapleader=" "
 
@@ -35,6 +40,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 set hlsearch
 
+set shortmess-=S
 "cancels search with Escape.
 "This caused some annoying problems when it was <silet><Esc> by loading a
 "buffer on bottom of page on refocus
@@ -111,3 +117,26 @@ set modelines=0
 set nomodeline
 
 Helptags
+
+
+" Center screen after jumping up or down with Ctrl+U and Ctrl+D
+nnoremap <C-u> <C-u>zz
+nnoremap <C-d> <C-d>zz
+
+" Center screen after jumping to the next or previous search result
+nnoremap n nzz
+nnoremap N Nzz
+
+" Center screen after using the next or previous match for '*', '#', or 'g*', 'g#'
+nnoremap * *zz
+nnoremap # #zz
+nnoremap g* g*zz
+nnoremap g# g#zz
+
+" Center screen after jumping between paragraphs with '{' and '}'
+nnoremap { {zz
+nnoremap } }zz
+
+" Center screen after moving up or down by one line with 'j' and 'k'
+nnoremap j jzz
+nnoremap k kzz
